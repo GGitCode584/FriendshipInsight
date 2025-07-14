@@ -19,15 +19,16 @@ internal sealed class ModEntry : Mod
     }
 
     private void OnDayStarted(object? sender, DayStartedEventArgs e)
-    {
-        MostrarResumenDelDiaAnterior();
+{
+    MostrarResumenDelDiaAnterior();
 
-        amistadInicial.Clear();
-        foreach (var kvp in Game1.player.friendshipData)
-        {
-            amistadInicial[kvp.Key] = kvp.Value.Points;
-        }
+    amistadInicial.Clear();
+    foreach (var kvp in Game1.player.friendshipData)
+    {
+        string npc = kvp.Key;
+        amistadInicial[npc] = kvp.Value.Points;
     }
+}
 
     private void OnDayEnding(object? sender, DayEndingEventArgs e)
     {
