@@ -1,4 +1,4 @@
-﻿using StardewModdingAPI;
+using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewValley;
 using System.Collections.Generic;
@@ -7,10 +7,7 @@ namespace FriendshipInsight;
 
 internal sealed class ModEntry : Mod
 {
-    // Guardamos los puntos de amistad al comienzo del día
     private Dictionary<string, int> amistadInicial = new();
-
-    // Almacenamos la variación de puntos de amistad del día anterior
     private Dictionary<string, int> amistadDeltaAyer = new();
 
     public override void Entry(IModHelper helper)
@@ -21,9 +18,6 @@ internal sealed class ModEntry : Mod
         helper.Events.GameLoop.DayEnding += OnDayEnding;
     }
 
-    /// <summary>
-    /// Se ejecuta al comenzar el día: mostramos resumen del día anterior y registramos puntos actuales
-    /// </summary>
     private void OnDayStarted(object? sender, DayStartedEventArgs e)
     {
         MostrarResumenDelDiaAnterior();
@@ -35,9 +29,6 @@ internal sealed class ModEntry : Mod
         }
     }
 
-    /// <summary>
-    /// Se ejecuta al finalizar el día: comparamos amistad inicial vs actual
-    /// </summary>
     private void OnDayEnding(object? sender, DayEndingEventArgs e)
     {
         amistadDeltaAyer.Clear();
@@ -54,9 +45,6 @@ internal sealed class ModEntry : Mod
         }
     }
 
-    /// <summary>
-    /// Muestra en consola los cambios de relación del día anterior
-    /// </summary>
     private void MostrarResumenDelDiaAnterior()
     {
         if (amistadDeltaAyer.Count == 0)
