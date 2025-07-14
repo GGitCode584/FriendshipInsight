@@ -46,8 +46,8 @@ internal sealed class ModEntry : Mod
         foreach (var kvp in Game1.player.friendshipData)
         {
             string npc = kvp.Key;
-            int puntosAntes = amistadInicial.ContainsKey(npc) 
-                ? amistadInicial[npc] 
+            int puntosAntes = amistadInicial.ContainsKey(npc)
+                ? amistadInicial[npc]
                 : 0;
             int puntosAhora = kvp.Value.Points;
             int delta = puntosAhora - puntosAntes;
