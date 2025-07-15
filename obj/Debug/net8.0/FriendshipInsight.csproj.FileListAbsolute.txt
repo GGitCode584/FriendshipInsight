@@ -1,0 +1,14 @@
+/workspaces/FriendshipInsight/bin/Debug/net8.0/manifest.json
+/workspaces/FriendshipInsight/bin/Debug/net8.0/FriendshipInsight.deps.json
+/workspaces/FriendshipInsight/bin/Debug/net8.0/FriendshipInsight.dll
+/workspaces/FriendshipInsight/bin/Debug/net8.0/FriendshipInsight.pdb
+/workspaces/FriendshipInsight/obj/Debug/net8.0/FriendshipInsight.csproj.AssemblyReference.cache
+/workspaces/FriendshipInsight/obj/Debug/net8.0/FriendshipInsight.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/FriendshipInsight/obj/Debug/net8.0/FriendshipInsight.AssemblyInfoInputs.cache
+/workspaces/FriendshipInsight/obj/Debug/net8.0/FriendshipInsight.AssemblyInfo.cs
+/workspaces/FriendshipInsight/obj/Debug/net8.0/FriendshipInsight.csproj.CoreCompileInputs.cache
+/workspaces/FriendshipInsight/obj/Debug/net8.0/FriendshipInsight.sourcelink.json
+/workspaces/FriendshipInsight/obj/Debug/net8.0/FriendshipInsight.dll
+/workspaces/FriendshipInsight/obj/Debug/net8.0/refint/FriendshipInsight.dll
+/workspaces/FriendshipInsight/obj/Debug/net8.0/FriendshipInsight.pdb
+/workspaces/FriendshipInsight/obj/Debug/net8.0/ref/FriendshipInsight.dll

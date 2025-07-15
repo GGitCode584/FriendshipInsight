@@ -1,0 +1,12 @@
+{
+  "Name": "Friendship Insight",
+  "Author": "Daniel & Copilot",
+  "Version": "1.0.0-beta",
+  "Description": "Observa y registra cómo cada acción afecta la amistad con los NPCs: regalos, diálogos, eventos y más.",
+  "UniqueID": "Daniel.FriendshipInsight",
+  "EntryDll": "FriendshipInsight.dll",
+  "MinimumApiVersion": "4.0.5",
+  "UpdateKeys": [ "Nexus:99999" ],
+  "Dependencies": [],
+  "ContentPackFor": null
+}
