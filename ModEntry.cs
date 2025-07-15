@@ -7,11 +7,11 @@ namespace FriendshipInsight;
 
 internal sealed class ModEntry : Mod
 {
-    // Puntos de amistad al comenzar el día
-    private readonly Dictionary<string, int> amistadInicial = new();
+    // Guardamos los puntos de amistad al comienzo del día
+    private Dictionary<string, int> amistadInicial = new();
 
-    // Variación de puntos de amistad del día anterior
-    private readonly Dictionary<string, int> amistadDeltaAyer = new();
+    // Almacenamos la variación de puntos de amistad del día anterior
+    private Dictionary<string, int> amistadDeltaAyer = new();
 
     public override void Entry(IModHelper helper)
     {
@@ -22,7 +22,7 @@ internal sealed class ModEntry : Mod
     }
 
     /// <summary>
-    /// Al iniciar el día: muestra resumen previo y registra puntos actuales.
+    /// Se ejecuta al comenzar el día: mostramos resumen del día anterior y registramos puntos actuales
     /// </summary>
     private void OnDayStarted(object? sender, DayStartedEventArgs e)
     {
@@ -31,24 +31,21 @@ internal sealed class ModEntry : Mod
         amistadInicial.Clear();
         foreach (var kvp in Game1.player.friendshipData)
         {
-            string npc = kvp.Key;
-            int puntos = kvp.Value.Points;
-            amistadInicial[npc] = puntos;
+            amistadInicial[kvp.Key] = kvp.Value.Points;
         }
     }
 
     /// <summary>
-    /// Al finalizar el día: calcula delta entre puntos iniciales y actuales.
+    /// Se ejecuta al finalizar el día: comparamos amistad inicial vs actual
     /// </summary>
     private void OnDayEnding(object? sender, DayEndingEventArgs e)
     {
         amistadDeltaAyer.Clear();
+
         foreach (var kvp in Game1.player.friendshipData)
         {
             string npc = kvp.Key;
-            int puntosAntes = amistadInicial.ContainsKey(npc)
-                ? amistadInicial[npc]
-                : 0;
+            int puntosAntes = amistadInicial.ContainsKey(npc) ? amistadInicial[npc] : 0;
             int puntosAhora = kvp.Value.Points;
             int delta = puntosAhora - puntosAntes;
 
@@ -58,20 +55,18 @@ internal sealed class ModEntry : Mod
     }
 
     /// <summary>
-    /// Muestra en consola los cambios de amistad del día anterior.
+    /// Muestra en consola los cambios de relación del día anterior
     /// </summary>
     private void MostrarResumenDelDiaAnterior()
     {
         if (amistadDeltaAyer.Count == 0)
         {
-            Monitor.Log(
-                "📊 Ayer no hubo cambios emocionales. Todo tranquilo en Pueblo Pelícano 🌙",
-                LogLevel.Debug
-            );
+            Monitor.Log("📊 Ayer no hubo cambios emocionales. Todo tranquilo en Pueblo Pelícano 🌙", LogLevel.Debug);
             return;
         }
 
         Monitor.Log("📊 Ayer ganaste:", LogLevel.Info);
+
         foreach (var kvp in amistadDeltaAyer)
         {
             string npc = kvp.Key;
