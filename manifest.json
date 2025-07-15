@@ -1,4 +1,4 @@
-﻿{
+{
   "Name": "Friendship Insight",
   "Author": "Daniel & Copilot",
   "Version": "1.0.0-beta",
@@ -6,6 +6,7 @@
   "UniqueID": "Daniel.FriendshipInsight",
   "EntryDll": "FriendshipInsight.dll",
   "MinimumApiVersion": "4.0.5",
-  "UpdateKeys": [],
-  "Dependencies": []
+  "UpdateKeys": [ "Nexus:99999" ],
+  "Dependencies": [],
+  "ContentPackFor": null
 }
