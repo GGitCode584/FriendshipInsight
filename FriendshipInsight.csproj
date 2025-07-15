@@ -21,10 +21,4 @@
       <HintPath>GameLibs/Microsoft.Xna.Framework.dll</HintPath>
     </Reference>
   </ItemGroup>
-
-  <ProjectExtensions>
-    <VisualStudio>
-      <UserProperties manifest_1json__JsonSchema="https://smapi.io/schemas/manifest.json" />
-    </VisualStudio>
-  </ProjectExtensions>
 </Project>
