@@ -1,0 +1,12 @@
+/workspaces/FriendshipInsight/bin/Debug/netstandard2.0/manifest.json
+/workspaces/FriendshipInsight/bin/Debug/netstandard2.0/FriendshipInsight.Mobile.deps.json
+/workspaces/FriendshipInsight/bin/Debug/netstandard2.0/FriendshipInsight.Mobile.dll
+/workspaces/FriendshipInsight/bin/Debug/netstandard2.0/FriendshipInsight.Mobile.pdb
+/workspaces/FriendshipInsight/obj/Debug/netstandard2.0/FriendshipInsightMobile.csproj.AssemblyReference.cache
+/workspaces/FriendshipInsight/obj/Debug/netstandard2.0/FriendshipInsightMobile.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/FriendshipInsight/obj/Debug/netstandard2.0/FriendshipInsightMobile.AssemblyInfoInputs.cache
+/workspaces/FriendshipInsight/obj/Debug/netstandard2.0/FriendshipInsightMobile.AssemblyInfo.cs
+/workspaces/FriendshipInsight/obj/Debug/netstandard2.0/FriendshipInsightMobile.csproj.CoreCompileInputs.cache
+/workspaces/FriendshipInsight/obj/Debug/netstandard2.0/FriendshipInsightMobile.sourcelink.json
+/workspaces/FriendshipInsight/obj/Debug/netstandard2.0/FriendshipInsight.Mobile.dll
+/workspaces/FriendshipInsight/obj/Debug/netstandard2.0/FriendshipInsight.Mobile.pdb

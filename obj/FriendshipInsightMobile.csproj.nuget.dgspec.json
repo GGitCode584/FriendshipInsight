@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "/workspaces/FriendshipInsight/FriendshipInsight.csproj": {}
+    "/workspaces/FriendshipInsight/FriendshipInsightMobile.csproj": {}
   },
   "projects": {
-    "/workspaces/FriendshipInsight/FriendshipInsight.csproj": {
-      "version": "1.0.0-beta",
+    "/workspaces/FriendshipInsight/FriendshipInsightMobile.csproj": {
+      "version": "1.0.0-beta-mobile",
       "restore": {
-        "projectUniqueName": "/workspaces/FriendshipInsight/FriendshipInsight.csproj",
-        "projectName": "FriendshipInsight",
-        "projectPath": "/workspaces/FriendshipInsight/FriendshipInsight.csproj",
+        "projectUniqueName": "/workspaces/FriendshipInsight/FriendshipInsightMobile.csproj",
+        "projectName": "FriendshipInsight.Mobile",
+        "projectPath": "/workspaces/FriendshipInsight/FriendshipInsightMobile.csproj",
         "packagesPath": "/home/codespace/.nuget/packages/",
         "outputPath": "/workspaces/FriendshipInsight/obj/",
         "projectStyle": "PackageReference",
@@ -17,14 +17,14 @@
           "/home/codespace/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "netstandard2.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {}
           }
         },
@@ -35,8 +35,16 @@
         }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -48,12 +56,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.412/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.412/RuntimeIdentifierGraph.json"
         }
       }
     }

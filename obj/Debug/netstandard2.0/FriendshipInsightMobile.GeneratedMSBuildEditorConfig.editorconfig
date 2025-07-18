@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = FriendshipInsight
+build_property.ProjectDir = /workspaces/FriendshipInsight/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

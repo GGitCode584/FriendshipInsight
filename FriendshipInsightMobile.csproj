@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+      <AssemblyName>FriendshipInsight.Mobile</AssemblyName>
+          <RootNamespace>FriendshipInsight</RootNamespace>
+              <Version>1.0.0-beta-mobile</Version>
+
+                  <!-- Usa un framework más amplio y compatible -->
+                      <TargetFramework>netstandard2.0</TargetFramework>
+                          <LangVersion>Latest</LangVersion>
+                              <Nullable>enable</Nullable>
+                                  <ImplicitUsings>enable</ImplicitUsings>
+                                      <WarningsAsErrors>Nullable</WarningsAsErrors>
+                                          
+                                              <!-- Oculta advertencias como CA1416 -->
+                                                  <NoWarn>CA1416</NoWarn>
+                                                    </PropertyGroup>
+
+                                                      <!-- Copiar manifest.json al directorio de salida -->
+                                                        <ItemGroup>
+                                                            <None Include="manifest.json">
+                                                                  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+                                                                      </None>
+                                                                        </ItemGroup>
+
+                                                                          <ItemGroup>
+                                                                              <!-- Las referencias siguen apuntando a GameLibs, igual que en PC -->
+                                                                                  <Reference Include="StardewModdingAPI">
+                                                                                        <HintPath>GameLibs/StardewModdingAPI.dll</HintPath>
+                                                                                              <Private>false</Private>
+                                                                                                  </Reference>
+                                                                                                      <Reference Include="StardewValley">
+                                                                                                            <HintPath>GameLibs/StardewValley.dll</HintPath>
+                                                                                                                  <Private>false</Private>
+                                                                                                                      </Reference>
+                                                                                                                          <Reference Include="Microsoft.Xna.Framework">
+                                                                                                                                <HintPath>GameLibs/Microsoft.Xna.Framework.dll</HintPath>
+                                                                                                                                      <Private>false</Private>
+                                                                                                                                          </Reference>
+                                                                                                                                            </ItemGroup>
+
+                                                                                                                                              <!-- Post‐build para Android: crea carpeta y empaqueta mod -->
+                                                                                                                                                <Target Name="PackModMobile" AfterTargets="Build">
+                                                                                                                                                    <MakeDir Directories="$(OutputPath)FriendshipInsightMobile" />
+
+                                                                                                                                                        <Copy SourceFiles="$(OutputPath)$(AssemblyName).dll"
+                                                                                                                                                                  DestinationFolder="$(OutputPath)FriendshipInsightMobile" />
+                                                                                                                                                                      <Copy SourceFiles="$(ProjectDir)manifest.json"
+                                                                                                                                                                                DestinationFolder="$(OutputPath)FriendshipInsightMobile" />
+                                                                                                                                                                                  </Target>
+                                                                                                                                                                                  </Project>

@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "34Q59ysjl2g=",
+  "dgSpecHash": "CsBk1cuY8Qg=",
   "success": true,
-  "projectFilePath": "/workspaces/FriendshipInsight/FriendshipInsight.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/workspaces/FriendshipInsight/FriendshipInsightMobile.csproj",
+  "expectedPackageFiles": [
+    "/home/codespace/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
